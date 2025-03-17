@@ -1,0 +1,17 @@
+
+services:
+  kinetics-app:
+    container_name: kinetics-app
+    build: .
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      # You might also set KEYCLOAK_URL=http://Keycloak:8080 or similar,
+      # so your app knows where to reach Keycloak.
+    networks:
+      - keycloak-network
+
+networks:
+  keycloak-network:
+    external: true

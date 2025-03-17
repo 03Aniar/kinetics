@@ -1,0 +1,6 @@
+POST /realms/kinetics-app-realm/protocol/openid-connect/token HTTP/1.1
+Host: keycloak:9090
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 167
+
+client_id=kinetics-app-client&client_secret=oBg8eQAsAFCrVIRzGb22VjDIsV0WQPVT&grant_type=password&username=michael&password=test&scope=openid+profile+email
