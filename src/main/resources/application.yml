@@ -2,6 +2,15 @@ server:
   port: 8083
 
 spring:
+  datasource:
+    url: jdbc:postgresql://keycloak:5435/kinetics_database
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    show-sql: true
   security:
     oauth2:
       resourceserver:
